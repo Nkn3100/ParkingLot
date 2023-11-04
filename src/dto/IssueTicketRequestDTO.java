@@ -52,4 +52,12 @@ public class IssueTicketRequestDTO {
 
     public IssueTicketRequestDTO() {
     }
+
+    public IssueTicketRequestDTO(VehicleType vehicleType, String vehicleNumber, String vehicleColor, Integer gateId, String vehicleMake) {
+        this.vehicleType = vehicleType;
+        this.vehicleNumber = vehicleNumber;
+        this.vehicleColor = vehicleColor;
+        this.gateId = gateId;
+        this.vehicleMake = vehicleMake;
+    }
 }

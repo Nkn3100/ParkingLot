@@ -22,7 +22,6 @@ public class ParkingLotRepository {
     }
     public void put(ParkingLot parkingLot){
         parkingLotMap.put(parkingLot.getId(), parkingLot);
-        System.out.println("Parking lot has been added successfully");
     }
 
     public ParkingLot getParkingLotFromGate(Gate gate){

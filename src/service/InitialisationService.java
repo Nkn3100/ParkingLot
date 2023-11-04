@@ -15,11 +15,11 @@ public class InitialisationService {
     private ParkingLotRepository parkingLotRepository;
     private ParkingSpotRepository parkingSpotRepository;
 
-    public InitialisationService() {
-        this.gateRepository = new GateRepository();
-        this.parkingFloorRepository = new ParkingFloorRepository();
-        this.parkingLotRepository = new ParkingLotRepository();
-        this.parkingSpotRepository = new ParkingSpotRepository();
+    public InitialisationService(GateRepository gateRepository, ParkingFloorRepository parkingFloorRepository, ParkingLotRepository parkingLotRepository, ParkingSpotRepository parkingSpotRepository) {
+        this.gateRepository = gateRepository;
+        this.parkingFloorRepository = parkingFloorRepository;
+        this.parkingLotRepository = parkingLotRepository;
+        this.parkingSpotRepository = parkingSpotRepository;
     }
 
     /***
@@ -41,6 +41,7 @@ public class InitialisationService {
         entryGate.setFloorNumber(1);
         entryGate.setGateType(GateType.ENTRY);
         entryGate.setStatus(Status.ACTIVE);
+        entryGate.setParkingLotId(1);
 
         Gate exitGate = new Gate();
         exitGate.setId(2);
@@ -49,6 +50,7 @@ public class InitialisationService {
         exitGate.setFloorNumber(1);
         exitGate.setGateType(GateType.EXIT);
         exitGate.setStatus(Status.ACTIVE);
+        exitGate.setParkingLotId(1);
 
         parkingLot.setGates(List.of(exitGate,entryGate));
         gateRepository.put(entryGate);

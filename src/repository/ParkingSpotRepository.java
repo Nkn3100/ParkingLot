@@ -23,6 +23,5 @@ public class ParkingSpotRepository {
     }
     public void put(ParkingSpot parkingSpot){
         parkingSpotMap.put(parkingSpot.getId(), parkingSpot);
-        System.out.println("Parking spot has been added successfully");
     }
 }
